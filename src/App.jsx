@@ -1,28 +1,18 @@
 import "./App.css";
-import { ContactForm } from "./components/ContactForm/ContactForm";
-import { SearchBox } from "./components/SearchBox/SearchBox";
-import ContactList from "./components/ContactList/ContactList";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "./redux/contactsOps.js";
-import { selectError, selectIsLoading } from "./redux/selectors.js";
+import Header from "../src/components/Header/Header.jsx";
+import Contacts from "../src/components/Contacts/Contacts.jsx";
+import Layout from "./components/Contacts/Layout.jsx";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return (
     <>
+      <Header />
       <h1 className="title">Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <ContactList />
+      <Contacts />
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+      </Routes>
     </>
   );
 }
