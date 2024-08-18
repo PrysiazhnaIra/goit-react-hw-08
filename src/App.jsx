@@ -1,17 +1,24 @@
 import "./App.css";
-import Header from "../src/components/Header/Header.jsx";
-import Contacts from "../src/components/Contacts/Contacts.jsx";
 import Layout from "./components/Contacts/Layout.jsx";
 import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Register from "./pages/Register/Register.jsx";
+import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
 
 function App() {
   return (
     <>
-      <Header />
       <h1 className="title">Phonebook</h1>
-      <Contacts />
       <Routes>
-        <Route path="/" element={<Layout />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contacts" element={<ContactsPage />} />
+        </Route>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
