@@ -27,14 +27,12 @@
 }
 
 .userName {
-  font-size: 1.5em;
+  font-family: Gill Sans, Verdana;
   font-weight: bold;
-  color: #3f81b8c2;
+  color: rgba(0, 0, 0, 0.708);
+  font-size: 45px;
   margin: 0;
   padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #86c2e521;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-top: 10px;
   margin-bottom: 20px;
