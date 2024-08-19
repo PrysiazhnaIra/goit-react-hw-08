@@ -6,8 +6,15 @@ import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
 import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getMeThunk } from "./redux/auth/operations.js";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getMeThunk());
+  }, [dispatch]);
   return (
     <>
       <h1 className="title">Phonebook</h1>
