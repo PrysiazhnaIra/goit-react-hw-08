@@ -4,6 +4,7 @@ import {
   addContact,
   deleteContact,
 } from "../contacts/contactsOps";
+import { logoutThunk } from "../auth/operations";
 
 const handlePending = (state) => {
   state.isLoading = true;
@@ -35,6 +36,11 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items.push(action.payload);
+      })
+      .addCase(logoutThunk.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
       })
       .addCase(addContact.rejected, handleRejected)
       .addCase(deleteContact.pending, handlePending)

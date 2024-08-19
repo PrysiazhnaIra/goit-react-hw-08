@@ -35,3 +35,12 @@ export const logoutThunk = createAsyncThunk("Logout", async (_, thunkAPI) => {
     return thunkAPI.registerThunk(error.message);
   }
 });
+
+export const getMeThunk = createAsyncThunk("getMe", async (_, thunkAPI) => {
+  try {
+    const { data } = await goItApi.get("users/current");
+    return data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
