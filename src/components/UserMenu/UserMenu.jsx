@@ -11,32 +11,12 @@ export default function UserMenu() {
 
   return (
     <div className={css.header}>
-      <h3>{user.name}</h3>
-      <ul className={css.list}>
-        <li className={css.item}></li>
-        <li className={css.item}></li>
-        {!isLoggedIn && (
-          <>
-            <li className={css.item}>
-              <NavLink to="/login" className={css.navLink}>
-                Login
-              </NavLink>
-            </li>
-            <li className={css.item}>
-              <NavLink to="/register" className={css.navLink}>
-                Register
-              </NavLink>
-            </li>
-          </>
-        )}
-        {isLoggedIn && (
-          <li className={css.item}>
-            <button className={css.btn} onClick={() => dispatch(logoutThunk())}>
-              Exit
-            </button>
-          </li>
-        )}
-      </ul>
+      <h3 className={css.userName}>Welcome {user.name}</h3>
+      {isLoggedIn && (
+        <button className={css.btn} onClick={() => dispatch(logoutThunk())}>
+          Exit
+        </button>
+      )}
     </div>
   );
 }

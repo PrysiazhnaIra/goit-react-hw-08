@@ -1,0 +1,20 @@
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navLink {
+  border-radius: 20px;
+  border: none;
+  padding: 14px;
+  width: 200px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #b8cbdb 0%, #19a0a7a2 100%);
+}
+
+.navLink:hover,
+.navLink:focus {
+  background-color: #008b8b;
+}
