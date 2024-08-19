@@ -2,6 +2,7 @@ import { Field, Formik, Form } from "formik";
 import { Link } from "react-router-dom";
 import css from "./Register.module.css";
 import { useDispatch } from "react-redux";
+import { registerThunk } from "../../redux/auth/operations";
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ export default function Register() {
 
   const handleSubmit = (values, options) => {
     console.log(values);
-    // dispatch(registerThunk(values));
+    dispatch(registerThunk(values));
     options.resetForm();
   };
 
