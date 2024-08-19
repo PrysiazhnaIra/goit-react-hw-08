@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import css from "./Header.module.css";
+import css from "./UserMenu.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn, selectUser } from "../../redux/auth/selectors";
 import { logoutThunk } from "../../redux/auth/operations";
 
-export default function Header() {
+export default function UserMenu() {
   const user = useSelector(selectUser);
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
