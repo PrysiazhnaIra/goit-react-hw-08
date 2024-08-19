@@ -1,9 +1,9 @@
 import "./App.css";
-import Layout from "./components/Contacts/Layout.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home.jsx";
-import Login from "./pages/Login/Login.jsx";
-import Register from "./pages/Register/Register.jsx";
+import Home from "./pages/HomePage/HomePage.jsx";
+import Login from "./pages/LoginPage/LoginPage.jsx";
+import Register from "./pages/RegistrationPage/RegistrationPage.jsx";
 import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import { useDispatch, useSelector } from "react-redux";

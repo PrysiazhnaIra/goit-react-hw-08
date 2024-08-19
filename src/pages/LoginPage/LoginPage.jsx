@@ -4,7 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import { loginThunk } from "../../redux/auth/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
-export default function Login() {
+export default function LoginPage() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const initialValues = {
     email: "",

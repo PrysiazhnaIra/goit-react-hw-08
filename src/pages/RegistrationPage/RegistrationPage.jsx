@@ -1,10 +1,10 @@
 import { Field, Formik, Form } from "formik";
 import { Link } from "react-router-dom";
-import css from "./Register.module.css";
+import css from "./RegistrationPage.module.css";
 import { useDispatch } from "react-redux";
 import { registerThunk } from "../../redux/auth/operations";
 
-export default function Register() {
+export default function RegistrationPage() {
   const dispatch = useDispatch();
   const initialValues = {
     email: "",
