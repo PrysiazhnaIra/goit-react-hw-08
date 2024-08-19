@@ -49,3 +49,11 @@ input:hover,
 input:focus {
   background-color: #f0f8ff;
 }
+
+.loader {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
