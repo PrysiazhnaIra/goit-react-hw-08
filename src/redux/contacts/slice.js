@@ -1,9 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  fetchContacts,
-  addContact,
-  deleteContact,
-} from "../contacts/contactsOps";
+import { fetchContacts, addContact, deleteContact } from "./operations";
 import { logoutThunk } from "../auth/operations";
 
 const handlePending = (state) => {

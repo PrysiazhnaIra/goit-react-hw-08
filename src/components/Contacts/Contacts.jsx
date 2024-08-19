@@ -3,8 +3,11 @@ import { SearchBox } from "../SearchBox/SearchBox.jsx";
 import ContactList from "../ContactList/ContactList.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "../../redux/contacts/contactsOps.js";
-import { selectError, selectIsLoading } from "../../redux/selectors.js";
+import { fetchContacts } from "../../redux/contacts/operations.js";
+import {
+  selectError,
+  selectIsLoading,
+} from "../../redux/contacts/selectors.js";
 
 export default function Contacts() {
   const dispatch = useDispatch();
