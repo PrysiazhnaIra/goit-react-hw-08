@@ -10,19 +10,11 @@ export default function UserMenu() {
   const dispatch = useDispatch();
 
   return (
-    <header className={css.header}>
+    <div className={css.header}>
       <h3>{user.name}</h3>
       <ul className={css.list}>
-        <li className={css.item}>
-          <NavLink to="/" className={css.navLink}>
-            Home
-          </NavLink>
-        </li>
-        <li className={css.item}>
-          <NavLink to="/contacts" className={css.navLink}>
-            Contacts
-          </NavLink>
-        </li>
+        <li className={css.item}></li>
+        <li className={css.item}></li>
         {!isLoggedIn && (
           <>
             <li className={css.item}>
@@ -45,6 +37,6 @@ export default function UserMenu() {
           </li>
         )}
       </ul>
-    </header>
+    </div>
   );
 }

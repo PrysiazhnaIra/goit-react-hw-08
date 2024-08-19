@@ -37,24 +37,25 @@ function App() {
               </PrivateRoute>
             }
           />
+
+          <Route
+            path="login"
+            element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <PublicRoute>
+                <Register />
+              </PublicRoute>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route
-          path="login"
-          element={
-            <PublicRoute>
-              <Login />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="register"
-          element={
-            <PublicRoute>
-              <Register />
-            </PublicRoute>
-          }
-        />
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
