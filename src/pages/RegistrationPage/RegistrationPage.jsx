@@ -21,7 +21,7 @@ export default function RegistrationPage() {
   return (
     <div>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form>
+        <Form className={css.formBlock}>
           <Field name="name" placeholder="Enter your name" />
           <Field name="email" placeholder="Enter your email" />
           <Field

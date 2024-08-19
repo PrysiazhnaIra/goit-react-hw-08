@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { loginThunk } from "../../redux/auth/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
+import css from "./LoginPage.module.css";
 
 export default function LoginPage() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -32,7 +33,9 @@ export default function LoginPage() {
             type="password"
             placeholder="Enter your password"
           />
-          <button type="submit">Login</button>
+          <button type="submit" className={css.btn}>
+            Login
+          </button>
 
           <p>
             You don't have an account? <Link to="/register">Sign up!</Link>

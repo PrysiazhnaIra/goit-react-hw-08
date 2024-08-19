@@ -2,12 +2,26 @@
 }
 
 .list {
+  list-style: none;
 }
 
 .item {
 }
 
 .navLink {
+  text-decoration: none;
 }
+
 .btn {
+  border-radius: 20px;
+  border: none;
+  padding: 14px;
+  width: 200px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #b8cbdb 0%, #19a0a7a2 100%);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #008b8b;
 }
