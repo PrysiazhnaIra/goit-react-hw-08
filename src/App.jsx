@@ -10,7 +10,6 @@ import NotFound from "./pages/NotFound/NotFound.jsx";
 function App() {
   return (
     <>
-      <h1 className="title">Phonebook</h1>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -20,6 +19,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <h1 className="title">Phonebook</h1>
     </>
   );
 }
