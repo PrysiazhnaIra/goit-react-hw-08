@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound/NotFound.jsx";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getMeThunk } from "./redux/auth/operations.js";
+import { PrivateRoute } from "./Routes/PrivateRoute.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,7 +22,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="contacts" element={<ContactsPage />} />
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoute>
+                <ContactsPage />
+              </PrivateRoute>
+            }
+          />
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
