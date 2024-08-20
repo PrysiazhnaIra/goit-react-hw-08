@@ -10,10 +10,10 @@ export default function AuthNav() {
     <div>
       {!isLoggedIn && (
         <div className={css.block}>
-          <NavLink to="/login" className={css.navLink}>
+          <NavLink to="/login" className="btn">
             Login
           </NavLink>
-          <NavLink to="/register" className={css.navLink}>
+          <NavLink to="/register" className="btn">
             Register
           </NavLink>
         </div>

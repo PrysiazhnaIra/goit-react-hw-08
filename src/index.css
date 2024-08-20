@@ -68,3 +68,27 @@ a:hover {
   transform: scale(1.1);
   font-size: 1.1em;
 }
+
+button,
+.btn {
+  font-size: 20px;
+  color: rgb(230, 236, 241);
+  border-radius: 20px;
+  border: none;
+  padding: 14px;
+  width: 200px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #5882a3 0%, #16868cf4 100%);
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #085757;
+  transform: scale(1.1);
+}
+
+p {
+  font-size: 24px;
+  color: #141c1c;
+}

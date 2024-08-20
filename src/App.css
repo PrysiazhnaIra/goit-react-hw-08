@@ -7,12 +7,15 @@
 }
 
 .title {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
   font-family: "Arial", sans-serif;
-  font-size: 2rem;
+  font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
-  background: linear-gradient(90deg, rgb(243, 63, 93), rgb(0, 139, 139));
+  background: linear-gradient(90deg, rgb(243, 63, 93), rgb(8, 89, 89));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;

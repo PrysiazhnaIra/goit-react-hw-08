@@ -1,13 +1,69 @@
-.home {
-  font-weight: bold;
-  color: #3f81b8c2;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.animatedGreetingContainer {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #86c2e521;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animatedGreeting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  max-width: 700px;
+  animation: slideUp 1s ease-out;
+  margin: 0 0 0 auto;
+}
+
+.animatedHighlight {
+  font-size: 2.5rem;
+  color: #555b5c;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.btn {
+  margin: 0 0 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scaleText {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

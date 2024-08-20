@@ -13,6 +13,7 @@ import { PrivateRoute } from "./Routes/PrivateRoute.jsx";
 import { PublicRoute } from "./Routes/PublicRoute.jsx";
 import { selectIsRefreshing } from "./redux/auth/selectors.js";
 import Loader from "./components/Loader/Loader.jsx";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
