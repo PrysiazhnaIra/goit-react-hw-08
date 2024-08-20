@@ -13,9 +13,7 @@ export default function UserMenu() {
     <div className={css.header}>
       <h3 className={css.userName}>Welcome {user.name}</h3>
       {isLoggedIn && (
-        <button className={css.btn} onClick={() => dispatch(logoutThunk())}>
-          Exit
-        </button>
+        <button onClick={() => dispatch(logoutThunk())}>Exit</button>
       )}
     </div>
   );

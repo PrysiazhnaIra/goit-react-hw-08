@@ -64,7 +64,7 @@ export const ContactForm = () => {
           <Field type="tel" id="number" name="number" className={css.input} />
           <ErrorMessage name="number" component="div" className={css.error} />
 
-          <button type="submit" className={css.btn} disabled={isSubmitting}>
+          <button type="submit" disabled={isSubmitting}>
             Add contact
           </button>
         </Form>

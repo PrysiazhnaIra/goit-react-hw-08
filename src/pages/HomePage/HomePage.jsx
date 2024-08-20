@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import css from "./HomePage.module.css";
 
 export default function HomePage() {
@@ -12,7 +13,9 @@ export default function HomePage() {
             Add, delete, and filter contacts in seconds. Secure your data with
             our top-notch authorization measures.
           </p>
-          <button className={css.btn}>Get Started Now</button>
+          <NavLink to="/contacts" className={css.btn}>
+            Get Started Now
+          </NavLink>
         </div>
       </div>
     </div>

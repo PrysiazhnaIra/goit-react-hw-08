@@ -29,9 +29,7 @@ export default function RegistrationPage() {
             type="password"
             placeholder="Enter your password"
           />
-          <button type="submit" className={css.btn}>
-            Register
-          </button>
+          <button type="submit">Register</button>
           <p>
             You have account? <Link to="/login">Sign in</Link>
           </p>

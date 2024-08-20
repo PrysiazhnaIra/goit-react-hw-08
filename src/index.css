@@ -78,12 +78,14 @@ button,
   padding: 14px;
   width: 200px;
   margin: 0 auto;
-  background-image: linear-gradient(to right, #5882a3 0%, #16868cf4 100%);
+  background-image: linear-gradient(to right, #769cbacf 0%, #16868cbe 100%);
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 button:hover,
-button:focus {
+.btn:hover,
+button:focus,
+.btn:focus {
   background-color: #085757;
   transform: scale(1.1);
 }
