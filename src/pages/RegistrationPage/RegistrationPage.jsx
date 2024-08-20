@@ -31,7 +31,10 @@ export default function RegistrationPage() {
           />
           <button type="submit">Register</button>
           <p>
-            You have account? <Link to="/login">Sign in</Link>
+            You have account?{" "}
+            <Link to="/login" className="link">
+              Sign in!
+            </Link>
           </p>
         </Form>
       </Formik>

@@ -38,7 +38,10 @@ export default function LoginPage() {
           </button>
 
           <p>
-            You don't have an account? <Link to="/register">Sign up!</Link>
+            You don't have an account?{" "}
+            <Link to="/register" className="link">
+              Sign up!
+            </Link>
           </p>
         </Form>
       </Formik>

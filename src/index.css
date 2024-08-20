@@ -64,7 +64,6 @@ a {
 }
 
 a:hover {
-  color: rgb(63, 37, 98);
   transform: scale(1.1);
   font-size: 1.1em;
 }
@@ -93,4 +92,9 @@ button:focus,
 p {
   font-size: 24px;
   color: #141c1c;
+}
+
+.link:hover,
+link:focus {
+  color: rgb(173, 79, 79);
 }
