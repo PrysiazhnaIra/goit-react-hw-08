@@ -59,6 +59,7 @@
   border-radius: 10px;
   border: none;
   display: block;
+  width: 100px;
 }
 
 .deleteButton:hover {
